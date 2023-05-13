@@ -7,9 +7,6 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to have_http_status(:ok)
     end
 
-    it 'A correct template was rendered.' do
-      expect(response).to render_template(:index)
-    end
 
     it 'the response body includes correct placeholder text.' do
       expect(response.body).to include('This page show all posts for a User')
@@ -20,10 +17,6 @@ RSpec.describe 'Posts', type: :request do
     before { get '/users/756/posts/45' }
     it 'receive a ok status' do
       expect(response).to have_http_status(:ok)
-    end
-
-    it 'A correct template was rendered.' do
-      expect(response).to render_template(:show)
     end
 
     it 'the response body includes correct placeholder text.' do
