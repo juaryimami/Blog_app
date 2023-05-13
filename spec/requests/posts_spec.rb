@@ -7,7 +7,6 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to have_http_status(:ok)
     end
 
-
     it 'the response body includes correct placeholder text.' do
       expect(response.body).to include('This page show all posts for a User')
     end
